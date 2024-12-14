@@ -1,4 +1,10 @@
+import { useLoaderData } from "react-router-dom";
+import Book from "../Book/Book";
+
 const Home = () => {
+  const books = useLoaderData();
+  console.log(books);
+
   return (
     <div className="mt-3">
       {/* Banner Secion */}
@@ -20,6 +26,12 @@ const Home = () => {
 
       <section className="mt-3">
         <h1 className="text-center mt-3 text-[#131313] text-4xl">Books</h1>
+        <div className="grid grid-cols-1 lg:grid-cols-3">
+          {books.map((book) => (
+            //console.log(book);
+            <Book key={book.bookId} book={book}></Book>
+          ))}
+        </div>
       </section>
     </div>
   );
