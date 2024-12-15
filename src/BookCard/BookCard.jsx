@@ -1,4 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import toast from "react-hot-toast";
+import { getBooks, setBooks } from "../utils";
 
 const BookCard = () => {
   const bookCards = useLoaderData();
@@ -84,10 +86,16 @@ const BookCard = () => {
           </div>
 
           <div className="flex gap-x-10 mt-4 ">
-            <button className="flex items-center justify-center btn text-[#131313]">
+            <button
+              onClick={() => setBooks(book, "readbooks")}
+              className="flex items-center justify-center btn text-[#131313]"
+            >
               Read{" "}
             </button>
-            <button className="flex items-center justify-center btn text-white bg-[#50B1C9]">
+            <button
+              onClick={() => setBooks(book, "wishbooks")}
+              className="flex items-center justify-center btn text-white bg-[#50B1C9]"
+            >
               WishList
             </button>
           </div>
