@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <div>
-      <div className="navbar ">
+      <div className="navbar  ">
         <div className="navbar-start">
           <div className="dropdown">
             <h1 className="text-[#131313] text-xs lg:text-xl lg:font-bold font-normal">
@@ -28,7 +28,7 @@ const Nav = () => {
 
             <li>
               <NavLink
-                to="/list"
+                to="/listedBooks"
                 className={({ isActive }) =>
                   isActive
                     ? "text-[#23BE0A] border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-[#FFF]"
