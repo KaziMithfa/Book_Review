@@ -28,6 +28,16 @@ const ReadList = () => {
     } else if (dataReceived === "Rating") {
       const sortedbooks = [...readLists].sort((a, b) => b.rating - a.rating);
       setShowLists(sortedbooks);
+    } else if (dataReceived === "Number of Pages") {
+      const sortedbooks = [...readLists].sort(
+        (a, b) => b.totalPages - a.totalPages
+      );
+      setShowLists(sortedbooks);
+    } else if (dataReceived === "Published Year") {
+      const sortedbooks = [...readLists].sort(
+        (a, b) => b.yearOfPublishing - a.yearOfPublishing
+      );
+      setShowLists(sortedbooks);
     }
   }, [dataReceived, readLists]);
 

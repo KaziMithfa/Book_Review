@@ -18,9 +18,7 @@ const ListedBooks = () => {
   }, [location.pathname]);
 
   const handleClick = (input) => {
-    if (input === "Sorting") {
-      setData(input);
-    } else if (input === "Rating") {
+    if (input === "Rating") {
       setData(input);
     } else if (input === "Number of Pages") {
       setData(input);
@@ -45,9 +43,6 @@ const ListedBooks = () => {
           <IoIosArrowDropdownCircle className=" text-white"></IoIosArrowDropdownCircle>
         </summary>
         <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-          <li onClick={() => handleClick("Sorting")}>
-            <a>Sorting</a>
-          </li>
           <li onClick={() => handleClick("Rating")}>
             <a>Rating</a>
           </li>
