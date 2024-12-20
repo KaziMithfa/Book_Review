@@ -7,11 +7,13 @@ import BookCard from "../BookCard/BookCard";
 import ListedBooks from "../ListedBooks/ListedBooks";
 import ReadList from "../ReadList/ReadList";
 import WishList from "../WishList/WishList";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
