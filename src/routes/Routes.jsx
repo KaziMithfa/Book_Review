@@ -16,9 +16,9 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Home></Home>,
-        loader: () => fetch("../../public/books.json"),
+        loader: () => fetch("/books.json"),
       },
 
       {
@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
       {
         path: "/book/:id",
         element: <BookCard></BookCard>,
-        loader: () => fetch("../../public/books.json"),
+        loader: () => fetch("/books.json"),
       },
       {
         path: "/list",
